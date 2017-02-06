@@ -1,19 +1,28 @@
 /**
  * Functions to parse the contact-congress YAML files and return a data structure with useful info.
  */
-
+import React, { Component } from 'react';
 var async = require('async');
 var fs = require('fs');
 var lodash = require('lodash');
 var path = require('path');
 var yaml = require('js-yaml');
 
+class ParseContact extends Component{
 
-var parseFillInData = function(fields) {
-  var fieldValues = [];
+  render(){
+    var async = require('async');
+    var fs = require('fs');
+    var lodash = require('lodash');
+    var path = require('path');
+    var yaml = require('js-yaml');
 
-  for (var i = 0, field; i < fields.length; ++i) {
-    field = fields[i];
+
+    var parseFillInData = function(fields) {
+      var fieldValues = [];
+
+      for (var i = 0, field; i < fields.length; ++i) {
+        field = fields[i];
 
     // There are some examples of fields with value of empty string, e.g. reps C000127, C001071 etc.
     // These fields appear to be a mix of oddly coded values (mphone) and some kind of
@@ -99,6 +108,7 @@ var parseMemberData = function(memberData) {
   }
 
   return res;
+  console.log('res,', res);
 };
 
 
@@ -135,8 +145,8 @@ var readMemberFile = function(memberFile, cb) {
  *     ]
  *   }
  *
- * @param membersDir
- * @param cb
+ *  membersDir
+ *  cb
  */
 var readMemberFiles = function(membersDir, cb) {
   fs.readdir(membersDir, function(err, files) {
@@ -156,8 +166,13 @@ var readMemberFiles = function(membersDir, cb) {
     });
 
     async.parallel(tasks, cb);
+    console.log('hello', readMemberFiles);
   });
 };
+    return(
+      <div></div>
+    )
+  }
+}
 
-
-module.exports.readMemberFiles = readMemberFiles;
+export default ParseContact;
