@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 import LegName from './leg-name';
 import leg from '../../public/api/Legislators.json';
 import '../App.css';
+import axios from 'axios';
 
 class AddressComponent extends Component {
   constructor(props){
@@ -12,9 +13,7 @@ class AddressComponent extends Component {
       name1: '',
       name2: ''
     }
-    contextTypes: {
-        router: React.PropTypes.object
-      }
+
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,22 +24,38 @@ class AddressComponent extends Component {
       this.setState({home: event.target.value});
 
       var o = [];
+      var bio_ids = [];
+      var production = window.location.hostname === 'localhost' ? false : true;
+      var apiAddress = production ? 'https://politicationapi.herokuapp.com/api' : 'http://localhost:5000/api';
+
       for (var i=0; i<leg.length; i++){
           var party = leg[i].terms.slice(-1)[0].party;
           var names = leg[i].name.official_full;
+          var bioguide = leg[i].id.bioguide;
           if (leg[i].terms.slice(-1)[0].type === "sen" && leg[i].terms.slice(-1)[0].state === event.target.value){
             console.log("hello");
             o.push(names, party);
-            console.log(o);
+            bio_ids.push(bioguide)
+            console.log(leg[i].terms.slice(-1));
             // console.log(o[0]);
-            this.setState({name1: "Senator " + o[0] + ", " + o[1] });
-            this.setState({name2: "Senator " + o[2] + ", " + o[3] });
+            this.setState({name1: "Senator " + o[0] + ", " + o[1]});
+            this.setState({name2: "Senator " + o[2] + ", " + o[3]});
+
+            axios.post(apiAddress, {
+              bio_ids: bio_ids
+            })
+            .then(function (resp) {
+              console.log(resp);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
 
 
           }
         }
       // let newState = event.target.value;
-      console.log('value', event.target.value);
+      // console.log('value', event.target.value);
       // return newState
     }
 
@@ -65,7 +80,7 @@ class AddressComponent extends Component {
       // transitionTo('/leg-name', query={keyword: this.props.params.test});
     return(
       <div className="addForm">
-      <form onSubmit= {this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
           <fieldset>
               <legend>Enter Your Address</legend>
 

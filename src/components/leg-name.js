@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
-import leg from '../../public/api/Legislators.json';
-import AddressComponent from './address-components.js';
-import
-
+// import leg from '../../public/api/Legislators.json';
+// import AddressComponent from './address-components.js';
+// import axios from 'axios';
+// import Request from 'superagent';
 class LegName extends Component {
-  constructor(props){
-    super(props);
-
-  }
-
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: 'https://congressforms.eff.org',
-  //     dataType: 'json',
-  //     cache: false,
-  //     success: function(data) {
-  //       this.setState({data: data});
-  //     }.bind(this),
-  //     error: function(xhr, status, err) {
-  //       console.error(this.props.url, status, err.toString());
-  //     }.bind(this)
-  //   });
+  // constructor(props){
+  //   super(props);
+  //
   // }
+  // componentDidMount(){
+
+  // }
+  // componentDidMount(){
+  // var url = "https://congressforms.eff.org/retrieve-form-elements/"
+  //   Request.post(url)
+  //     .set({'bio_ids': 'C000880'})
+  //     .then((response) => {
+  //       console.log('response', response);
+  //       // this.setState({
+  //       //   soccerdata: response.body.name,
+  //       //   crestUrl: response.body.crestUrl
+  //       })
+  //
+  //   }
+
   render(){
 
 
