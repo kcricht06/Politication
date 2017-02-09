@@ -40,7 +40,7 @@ class AddressComponent extends Component {
 
             bio_ids.push(bioguide)
 
-            console.log(leg[i].terms.slice(-1));
+            // console.log(leg[i].terms.slice(-1));
 
             this.setState({name1: "Senator " + o[0] + ", " + o[1]});
             this.setState({name2: "Senator " + o[2] + ", " + o[3]});
@@ -50,7 +50,9 @@ class AddressComponent extends Component {
               bio_ids: bio_ids
             })
             .then(function (resp) {
-              console.log(JSON.parse(resp.data));
+              var parse = JSON.parse(resp.data);
+              console.log(parse);
+
             })
             .catch(function (error) {
               console.log(error);
@@ -61,7 +63,6 @@ class AddressComponent extends Component {
         }
 
     }
-
 
 
 
@@ -86,7 +87,7 @@ class AddressComponent extends Component {
           <fieldset>
               <legend>Choose your state to message your senators</legend>
 
-                  <select id='state' name='state' ref="newState" onChange={this.handleChange}>
+                  <select className="selectpicker" id='state' name='state' ref="newState" onChange={this.handleChange}>
                     <option value=""></option>
                   	<option value="AL">Alabama</option>
                   	<option value="AK">Alaska</option>

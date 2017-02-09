@@ -5,6 +5,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import AddressComponent from './components/address-components.js';
 import LegName from './components/leg-name.js';
+import FormFill from './components/form-fill.js';
 // import ParseContact from './analysis/parse-contact-congress.js';
 class App extends Component {
 
@@ -17,6 +18,7 @@ class App extends Component {
           <Route className="formAdd" path='/' component={AddressComponent} >
             <Route path='/leg-name' component={LegName}></Route>
           </Route>
+          <Route path='/form-fill' component={FormFill}></Route>
       </Router>
     );
   }

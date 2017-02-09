@@ -10,9 +10,9 @@ ul {
 }
 
 .jumbotron {
-  background-color: #d9d9d9;
+  background-color: #35302c;
   opacity: 0.5;
-  color: black;
+  color: grey;
 
 }
 
@@ -24,4 +24,10 @@ select {
   width: 250px;
   opacity: 0.8;
   background-color: #d9d9d9;
+}
+#forms {
+  width: 66%;
+  align-items: center;
+  text-align: left;
+  padding-left: 150px;
 }
