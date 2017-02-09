@@ -51,7 +51,19 @@ class AddressComponent extends Component {
             })
             .then(function (resp) {
               var parse = JSON.parse(resp.data);
-              console.log(parse);
+              for (var prop in parse) {
+                // console.log('obj.' + prop, '=', parse[prop].required_actions);
+                var topic = parse[prop].required_actions;
+                console.log(topic)
+                for(var x=0; x< topic.length; x++){
+                  if (topic[x].value == "$TOPIC"){
+                    console.log(topic[x].options_hash);
+                  }
+                }
+              }
+
+
+              // console.log(parse);
 
             })
             .catch(function (error) {
