@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './header.js';
 import '../index.css';
 import '../form.css';
+import axios from 'axios';
 class FormFill extends Component{
   constructor(props){
     super(props);
@@ -15,7 +16,8 @@ class FormFill extends Component{
       $ADDRESS_ZIP5:'',
       $EMAIL:'',
       $TOPIC:'',
-      $MESSAGE:''
+      $MESSAGE:'',
+      newOptions:''
 
     };
 
@@ -26,7 +28,7 @@ class FormFill extends Component{
 
   handleChange(event){
     this.setState({
-      $NAME_PREFIX: event.target.$PREFIX,
+      $NAME_PREFIX: event.target.$NAME_PREFIX,
       $NAME_FIRST: event.target.$NAME_FIRST,
       $NAME_LAST: event.target.$NAME_LAST,
       $ADDRESS_STREET: event.target.$ADDRESS_STREET,
@@ -34,12 +36,27 @@ class FormFill extends Component{
       $ADDRESS_ZIP5: event.target.$ADDRESS_ZIP5,
       $EMAIL: event.target.$EMAIL,
       $TOPIC: event.target.$TOPIC,
-      $MESSAGE: event.target.$MESSAGE
+      $MESSAGE: event.target.$MESSAGE,
+      newOptions: this.props.newOptions
 
 
 
     });
   }
+  createSelectItems() {
+     let items = [];
+     for (let i = 0; i <= this.props.topics1; i++) {
+          items.push(<option key={i} value={i}>{i}</option>);
+          //here I will be creating my options dynamically based on
+          //what props are currently passed to the parent component
+     }
+     console.log(items);
+ }
+
+onDropdownSelected(e) {
+    console.log("THE VAL", e.target.value);
+    //here you will see the current selected value of the select input
+}
   render(){
     return(
       <div>
@@ -58,7 +75,7 @@ class FormFill extends Component{
                 <div>
         		      <label htmlFor="$NAME_PREFIX">
           		      <span>Prefix</span>
-          			      <select id="$NAME_PREFIX" name="$NAME_PREFIX" tabIndex="4" value={this.state.$NAME_PREFIX}>
+          			      <select onChange={this.handleChange} id="$NAME_PREFIX" name="$NAME_PREFIX" tabIndex="4" value={this.state.$NAME_PREFIX}>
           			         <option value="mr">Mr.</option>
           			         <option value="miss">Ms.</option>
           			         <option value="mrs">Mrs.</option>
@@ -105,20 +122,19 @@ class FormFill extends Component{
         		      <label htmlFor="$TOPIC">
         		      <span>Topic: </span>
         			      <select id="$TOPIC" name="$TOPIC" value={this.state.$TOPIC} tabIndex="4">
-        			         <option value="hello">{this.props.options}</option>
-        			         <option value="quote"></option>
-        			         <option value="general"></option>
+        			         <option value="">{this.createSelectItems}</option>
+
         			      </select>
         		      </label>
             	 </div>
             	 <div>
         		      <label htmlFor="message">
         		      	<span className="required">Message: </span>
-        		      	<textarea id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
+        		      	<textarea onChange={this.handleChange} id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
         		      </label>
             	 </div>
             	 <div>
-        		      <button name="submit" type="submit" id="submit" >SEND</button>
+        		      <button name="submit" type="submit" id="submitForm" >SEND</button>
             	 </div>
             		   </form>
 

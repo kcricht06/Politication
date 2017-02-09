@@ -27,14 +27,14 @@ class LegName extends Component {
 
   render(){
 
-
+    console.log(this.props.urlOne)
 
     return(
       <div id="legs">
 
         <ul>
-          <li className="legName">{this.props.nameOne}</li>
-          <li className="legName">{this.props.nameTwo}</li>
+          <a href={this.props.urlOne}><li className="legName">{this.props.nameOne}</li></a>
+          <a href={this.props.urlTwo}><li className="legName">{this.props.nameTwo}</li></a>
         </ul>
       </div>
     )

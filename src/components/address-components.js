@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import LegName from './leg-name';
 import Header from './header';
+import FormFill from './form-fill';
+import Footer from './footer';
 import leg from '../../public/api/Legislators.json';
 import '../App.css';
 import axios from 'axios';
@@ -14,7 +16,9 @@ class AddressComponent extends Component {
       name1: '',
       name2: '',
       topics1:'',
-      topics2:''
+      topics2:'',
+      url1:'',
+      url2:''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -35,17 +39,18 @@ class AddressComponent extends Component {
           var names = leg[i].name.official_full;
           var bioguide = leg[i].id.bioguide;
           if (leg[i].terms.slice(-1)[0].type === "sen" && leg[i].terms.slice(-1)[0].state === event.target.value){
-            console.log("hello");
-
-            o.push(names, party);
+            var url=leg[i].terms.slice(-1)[0].url;
+            o.push(names, party, url);
+            console.log(o)
 
             bio_ids.push(bioguide)
 
             this.setState({
               name1: "Senator " + o[0] + ", " + o[1],
-              name2: "Senator " + o[2] + ", " + o[3]
+              name2: "Senator " + o[3] + ", " + o[4],
+              url1: o[2],
+              url2: o[5]
             });
-
             axios.post(apiAddress, {
               bio_ids: bio_ids
             })
@@ -109,8 +114,10 @@ class AddressComponent extends Component {
 
 
     handleSubmit(e) {
-      console.log('A state was submitted: ' + this.refs.newState.value);
-      e.preventDefault();
+      browserHistory.push('/form-fill' + this.state.topics1)
+      // e.preventDefault();
+
+
   }
 
 
@@ -181,12 +188,20 @@ class AddressComponent extends Component {
                   	<option value="WI">Wisconsin</option>
                   	<option value="WY">Wyoming</option>
                   </select>
+                  <br />
+                  <a href="/form-fill" type="submit" className="btn btn-default">Submit</a>
 
 
           </fieldset>
       </form>
-
-      <LegName newState={this.state.home} nameOne={this.state.name1} nameTwo={this.state.name2}/>
+      <LegName
+        newState={this.state.home}
+        nameOne={this.state.name1}
+        nameTwo={this.state.name2}
+        urlOne={this.state.url1}
+        urlTwo={this.state.url2}
+      />
+      <Footer />
     </div>
     )
   }
