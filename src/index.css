@@ -13,9 +13,13 @@ ul {
   background-color: #35302c;
   opacity: 0.5;
   color: grey;
+  text-decoration: none;
 
 }
-
+#header{
+  text-decoration: none;
+  color: black;
+}
 legend {
   border-bottom: 0;
 }

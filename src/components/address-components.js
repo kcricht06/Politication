@@ -13,7 +13,8 @@ class AddressComponent extends Component {
       home: '',
       name1: '',
       name2: '',
-      topics:''
+      topics1:'',
+      topics2:''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -76,7 +77,8 @@ class AddressComponent extends Component {
         }
     }
 
-    handleOptionChange(resp){
+    handleOptionChange(resp, e){
+      e.preventDefault();
         var parse = JSON.parse(resp.data);
         for (var prop in parse) {
           // console.log('obj.' + prop, '=', parse[prop].required_actions);
@@ -86,12 +88,16 @@ class AddressComponent extends Component {
             if (topic[x].value == "$TOPIC"){
               // console.log(topic[x].options_hash);
               var opt = topic[x].options_hash;
+              // console.log(opt)
               // console.log(opt);
               for (var option in opt){
                 // console.log('obj.' + option, '=', opt[option]);
                 var options = option;
                 console.log(options);
-                this.setState({topics: options})
+                this.setState({
+                  topics1: options,
+                  topics2: options
+                })
               }
             }
           }

@@ -67,37 +67,37 @@ class FormFill extends Component{
         		   </div>
                <div>
         		      <label htmlFor="$NAME_FIRST">
-        		      	<span className="required">First Name: *</span>
+        		      	<span className="required">First Name: </span>
         		      	<input onChange={this.handleChange} type="text" id="name" name="name" value={this.state.$NAME_FIRST} placeholder="Your First Name" required="required" tabIndex="1" />
         		      </label>
         			 </div>
                <div>
                   <label htmlFor="$NAME_LAST">
-                    <span className="required">Last Name: *</span>
+                    <span className="required">Last Name: </span>
                     <input onChange={this.handleChange} type="text" id="lname" name="lname" value={this.state.$NAME_LAST} placeholder="Your Last Name" required="required" tabIndex="1" />
                   </label>
                </div>
                <div>
                   <label htmlFor="$ADDRESS_STREET">
-                    <span className="required">Street Address: *</span>
+                    <span className="required">Street Address: </span>
                     <input onChange={this.handleChange} type="text" id="$ADDRESS_STREET" name="$ADDRESS_STREET" value={this.state.$ADDRESS_STREET} placeholder="Address" required="required" tabIndex="1" />
                   </label>
                </div>
                <div>
                 <label htmlFor="$ADDRESS_CITY">
-                  <span className="required">City: *</span>
+                  <span className="required">City: </span>
                   <input onChange={this.handleChange} type="text" id="$ADDRESS_CITY" name="$ADDRESS_CITY" value={this.state.$ADDRESS_CITY} placeholder="City" required="required" tabIndex="1" />
                 </label>
                </div>
                <div>
               <label htmlFor="$ADDRESS_ZIP5">
-                  <span className="required">Zip Code: *</span>
+                  <span className="required">Zip Code: </span>
                   <input onChange={this.handleChange} type="text" id="$ADDRESS_ZIP5" name="$ADDRESS_ZIP5" value={this.state.$ADDRESS_ZIP5} placeholder="Zip Code" required="required" tabIndex="1" />
               </label>
                </div>
         			 <div>
         		      <label htmlFor="$EMAIL">
-        		      	<span className="required">Email: *</span>
+        		      	<span className="required">Email: </span>
         		      	<input onChange={this.handleChange} type="email" id="$EMAIL" name="$EMAIL" value={this.state.$EMAIL} placeholder="Your Email" tabIndex="2" required="required" />
         		      </label>
             	 </div>
@@ -113,7 +113,7 @@ class FormFill extends Component{
             	 </div>
             	 <div>
         		      <label htmlFor="message">
-        		      	<span className="required">Message: *</span>
+        		      	<span className="required">Message: </span>
         		      	<textarea id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
         		      </label>
             	 </div>
