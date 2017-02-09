@@ -12,7 +12,8 @@ class AddressComponent extends Component {
     this.state = {
       home: '',
       name1: '',
-      name2: ''
+      name2: '',
+      topics:''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,7 +23,6 @@ class AddressComponent extends Component {
 
     handleChange(event) {
       this.setState({home: event.target.value});
-
       var o = [];
       var bio_ids = [];
       var production = window.location.hostname === 'localhost' ? false : true;
@@ -40,11 +40,10 @@ class AddressComponent extends Component {
 
             bio_ids.push(bioguide)
 
-            // console.log(leg[i].terms.slice(-1));
-
-            this.setState({name1: "Senator " + o[0] + ", " + o[1]});
-            this.setState({name2: "Senator " + o[2] + ", " + o[3]});
-
+            this.setState({
+              name1: "Senator " + o[0] + ", " + o[1],
+              name2: "Senator " + o[2] + ", " + o[3]
+            });
 
             axios.post(apiAddress, {
               bio_ids: bio_ids
@@ -54,27 +53,51 @@ class AddressComponent extends Component {
               for (var prop in parse) {
                 // console.log('obj.' + prop, '=', parse[prop].required_actions);
                 var topic = parse[prop].required_actions;
-                console.log(topic)
+                // console.log(topic)
                 for(var x=0; x< topic.length; x++){
                   if (topic[x].value == "$TOPIC"){
-                    console.log(topic[x].options_hash);
+                    // console.log(topic[x].options_hash);
+                    var opt = topic[x].options_hash;
+                    // console.log(opt);
+                    for (var option in opt){
+                      // console.log('obj.' + option, '=', opt[option]);
+                      var options = option;
+                      console.log(options);
+
+                     }
+                   }
                   }
                 }
-              }
-
-
-              // console.log(parse);
-
             })
             .catch(function (error) {
               console.log(error);
             });
-
-
           }
         }
-
     }
+
+    handleOptionChange(resp){
+        var parse = JSON.parse(resp.data);
+        for (var prop in parse) {
+          // console.log('obj.' + prop, '=', parse[prop].required_actions);
+          var topic = parse[prop].required_actions;
+          // console.log(topic)
+          for(var x=0; x< topic.length; x++){
+            if (topic[x].value == "$TOPIC"){
+              // console.log(topic[x].options_hash);
+              var opt = topic[x].options_hash;
+              // console.log(opt);
+              for (var option in opt){
+                // console.log('obj.' + option, '=', opt[option]);
+                var options = option;
+                console.log(options);
+                this.setState({topics: options})
+              }
+            }
+          }
+        }
+      }
+
 
 
 

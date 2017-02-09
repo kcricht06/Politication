@@ -31,3 +31,13 @@ select {
   text-align: left;
   padding-left: 150px;
 }
+
+.legName{
+  color: #333;
+  font-size: 18px;
+  padding-right: 41px;
+
+}
+#legs{
+  text-align: center;
+}

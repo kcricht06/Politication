@@ -53,6 +53,7 @@ h4{
    border-radius: 4px;
    margin-bottom: 25px;
    padding: 5px;
+   color: #000;
 }
 #contact-form input:focus,
 #contact-form select:focus,

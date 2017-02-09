@@ -23,6 +23,7 @@ class FormFill extends Component{
 
   }
 
+
   handleChange(event){
     this.setState({
       $NAME_PREFIX: event.target.$PREFIX,
@@ -39,7 +40,6 @@ class FormFill extends Component{
 
     });
   }
-
   render(){
     return(
       <div>
@@ -66,16 +66,16 @@ class FormFill extends Component{
         		      </label>
         		   </div>
                <div>
-            		      <label htmlFor="$NAME_FIRST">
-            		      	<span className="required">First Name: *</span>
-            		      	<input onChange={this.handleChange} type="text" id="name" name="name" value={this.state.$NAME_FIRST} placeholder="Your First Name" required="required" tabIndex="1" />
-            		      </label>
+        		      <label htmlFor="$NAME_FIRST">
+        		      	<span className="required">First Name: *</span>
+        		      	<input onChange={this.handleChange} type="text" id="name" name="name" value={this.state.$NAME_FIRST} placeholder="Your First Name" required="required" tabIndex="1" />
+        		      </label>
         			 </div>
                <div>
-                    <label htmlFor="$NAME_LAST">
-                      <span className="required">Last Name: *</span>
-                      <input onChange={this.handleChange} type="text" id="lname" name="lname" value={this.state.$NAME_LAST} placeholder="Your Last Name" required="required" tabIndex="1" />
-                    </label>
+                  <label htmlFor="$NAME_LAST">
+                    <span className="required">Last Name: *</span>
+                    <input onChange={this.handleChange} type="text" id="lname" name="lname" value={this.state.$NAME_LAST} placeholder="Your Last Name" required="required" tabIndex="1" />
+                  </label>
                </div>
                <div>
                   <label htmlFor="$ADDRESS_STREET">
@@ -91,34 +91,34 @@ class FormFill extends Component{
                </div>
                <div>
               <label htmlFor="$ADDRESS_ZIP5">
-                <span className="required">Zip Code: *</span>
-                <input onChange={this.handleChange} type="text" id="$ADDRESS_ZIP5" name="$ADDRESS_ZIP5" value={this.state.$ADDRESS_ZIP5} placeholder="Zip Code" required="required" tabIndex="1" />
+                  <span className="required">Zip Code: *</span>
+                  <input onChange={this.handleChange} type="text" id="$ADDRESS_ZIP5" name="$ADDRESS_ZIP5" value={this.state.$ADDRESS_ZIP5} placeholder="Zip Code" required="required" tabIndex="1" />
               </label>
                </div>
         			 <div>
-            		      <label htmlFor="$EMAIL">
-            		      	<span className="required">Email: *</span>
-            		      	<input onChange={this.handleChange} type="email" id="$EMAIL" name="$EMAIL" value={this.state.$EMAIL} placeholder="Your Email" tabIndex="2" required="required" />
-            		      </label>
+        		      <label htmlFor="$EMAIL">
+        		      	<span className="required">Email: *</span>
+        		      	<input onChange={this.handleChange} type="email" id="$EMAIL" name="$EMAIL" value={this.state.$EMAIL} placeholder="Your Email" tabIndex="2" required="required" />
+        		      </label>
             	 </div>
             	 <div>
-            		      <label htmlFor="subject">
-            		      <span>Subject: </span>
-            			      <select id="subject" name="subject" value={this.state.$TOPIC} tabIndex="4">
-            			         <option value="hello">Product Price Question</option>
-            			         <option value="quote">Where are my dragons?!</option>
-            			         <option value="general">- Valar Morghulis - </option>
-            			      </select>
-            		      </label>
+        		      <label htmlFor="$TOPIC">
+        		      <span>Topic: </span>
+        			      <select id="$TOPIC" name="$TOPIC" value={this.state.$TOPIC} tabIndex="4">
+        			         <option value="hello">{this.props.options}</option>
+        			         <option value="quote"></option>
+        			         <option value="general"></option>
+        			      </select>
+        		      </label>
             	 </div>
             	 <div>
-            		      <label htmlFor="message">
-            		      	<span className="required">Message: *</span>
-            		      	<textarea id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
-            		      </label>
+        		      <label htmlFor="message">
+        		      	<span className="required">Message: *</span>
+        		      	<textarea id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
+        		      </label>
             	 </div>
             	 <div>
-            		      <button name="submit" type="submit" id="submit" >SEND</button>
+        		      <button name="submit" type="submit" id="submit" >SEND</button>
             	 </div>
             		   </form>
 

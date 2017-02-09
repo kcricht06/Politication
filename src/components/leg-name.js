@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../index.css';
 // import leg from '../../public/api/Legislators.json';
 // import AddressComponent from './address-components.js';
 // import axios from 'axios';
@@ -29,11 +30,11 @@ class LegName extends Component {
 
 
     return(
-      <div>
+      <div id="legs">
 
         <ul>
-          <li>{this.props.nameOne}</li>
-          <li>{this.props.nameTwo}</li>
+          <li className="legName">{this.props.nameOne}</li>
+          <li className="legName">{this.props.nameTwo}</li>
         </ul>
       </div>
     )
