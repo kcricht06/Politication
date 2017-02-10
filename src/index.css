@@ -16,6 +16,9 @@ ul {
   text-decoration: none;
 
 }
+#iframe{
+  float:middle;
+}
 #header{
   text-decoration: none;
   color: white;
@@ -26,6 +29,11 @@ ul {
 }
 legend {
   border-bottom: 0;
+  margin-bottom: 65px;
+}
+Iframe{
+  margin-left: -360px;
+  padding-bottom: 100px;
 }
 
 select {
@@ -40,7 +48,9 @@ select {
   align-items: center;
   text-align: left;
   padding-left: 150px;
+  text-align:center;
 }
+#message {}
 
 .legName{
   color: #333;

@@ -1,29 +1,22 @@
 import React, { Component } from 'react';
 import '../index.css';
+import Footer from './footer';
 // import leg from '../../public/api/Legislators.json';
 // import AddressComponent from './address-components.js';
 // import axios from 'axios';
 // import Request from 'superagent';
 class LegName extends Component {
-  // constructor(props){
-  //   super(props);
-  //
-  // }
-  // componentDidMount(){
+  constructor(props){
+    super(props);
+    this.state = {
+      contact:''
+    }
+  }
 
-  // }
-  // componentDidMount(){
-  // var url = "https://congressforms.eff.org/retrieve-form-elements/"
-  //   Request.post(url)
-  //     .set({'bio_ids': 'C000880'})
-  //     .then((response) => {
-  //       console.log('response', response);
-  //       // this.setState({
-  //       //   soccerdata: response.body.name,
-  //       //   crestUrl: response.body.crestUrl
-  //       })
-  //
-  //   }
+  handleClick(e){
+    e.preventDefault();
+
+  }
 
   render(){
 
@@ -33,8 +26,10 @@ class LegName extends Component {
       <div id="legs">
 
         <ul>
-          <a href={this.props.urlOne}><li className="legName">{this.props.nameOne}</li></a>
-          <a href={this.props.urlTwo}><li className="legName">{this.props.nameTwo}</li></a>
+          <a onClick={this.handleClick} href={this.props.contactOne}><li className="legName">{this.props.nameOne}</li></a>
+          <a onClick={this.handleClick} href={this.props.contactTwo}><li className="legName">{this.props.nameTwo}</li></a>
+
+          <Footer onClick={this.handleClick} />
         </ul>
       </div>
     )

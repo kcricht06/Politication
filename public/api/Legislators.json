@@ -195,7 +195,7 @@
         "address": "511 Hart Senate Office Building Washington DC 20510",
         "phone": "202-224-3441",
         "fax": "202-228-0514",
-        "contact_form": "http://www.cantwell.senate.gov/public/index.cfm/email-maria",
+        "contact_form": "https://www.cantwell.senate.gov/contact/email/form",
         "office": "511 Hart Senate Office Building",
         "state_rank": "junior",
         "rss_url": "http://www.cantwell.senate.gov/public/index.cfm/rss/feed"
@@ -1377,7 +1377,7 @@
         "address": "731 Hart Senate Office Building Washington DC 20510",
         "phone": "202-224-4822",
         "fax": "202-228-0325",
-        "contact_form": "http://www.stabenow.senate.gov/?p=contact",
+        "contact_form": "https://www.stabenow.senate.gov/contact",
         "office": "731 Hart Senate Office Building",
         "state_rank": "senior",
         "rss_url": "http://stabenow.senate.gov/rss/?p=news"
@@ -1499,7 +1499,7 @@
         "address": "530 Hart Senate Office Building Washington DC 20510",
         "phone": "202-224-2921",
         "fax": "202-228-6362",
-        "contact_form": "http://www.whitehouse.senate.gov/contact",
+        "contact_form": "https://www.whitehouse.senate.gov/contact/email-sheldon",
         "office": "530 Hart Senate Office Building",
         "state_rank": "junior",
         "rss_url": "http://www.whitehouse.senate.gov/rss/feeds/?type=all&amp;cachebuster=1"
@@ -1971,7 +1971,7 @@
         "address": "413 Dirksen Senate Office Building Washington DC 20510",
         "phone": "202-224-2523",
         "fax": "202-224-2693",
-        "contact_form": "http://www.collins.senate.gov/public/index.cfm/email",
+        "contact_form": "https://www.collins.senate.gov/contact",
         "office": "413 Dirksen Senate Office Building",
         "state_rank": "senior",
         "rss_url": "http://www.collins.senate.gov/public/?a=rss.feed"
@@ -2065,7 +2065,7 @@
         "address": "517 Hart Senate Office Building Washington DC 20510",
         "phone": "202-224-2934",
         "fax": "202-228-2856",
-        "contact_form": "http://www.cornyn.senate.gov/public/index.cfm?p=ContactForm",
+        "contact_form": "https://www.cornyn.senate.gov/contact",
         "office": "517 Hart Senate Office Building",
         "state_rank": "senior",
         "rss_url": "http://www.cornyn.senate.gov/public/?a=rss.feed"
@@ -4466,6 +4466,7 @@
         "party": "Democrat",
         "url": "https://www.bennet.senate.gov",
         "rss_url": "http://www.bennet.senate.gov/rss/feeds/?type=news",
+        "contact_form": "https://www.bennet.senate.gov/?p=contact",
         "address": "261 Russell Senate Office Building Washington DC 20510",
         "office": "261 Russell Senate Office Building",
         "phone": "202-224-5852"
@@ -5298,6 +5299,7 @@
         "state_rank": "senior",
         "party": "Democrat",
         "url": "https://www.blumenthal.senate.gov",
+        "contact_form": "https://www.blumenthal.senate.gov/contact/",
         "rss_url": "http://www.blumenthal.senate.gov/rss/feeds/?type=all",
         "address": "706 Hart Senate Office Building Washington DC 20510",
         "office": "706 Hart Senate Office Building",
@@ -5423,6 +5425,7 @@
         "party": "Republican",
         "url": "http://www.blunt.senate.gov/public",
         "rss_url": "http://www.blunt.senate.gov/public/?a=rss.feed",
+        "contact-form": "https://www.blunt.senate.gov/public/index.cfm/contact-roy",
         "address": "260 Russell Senate Office Building Washington DC 20510",
         "office": "260 Russell Senate Office Building",
         "phone": "202-224-5721"
@@ -6472,6 +6475,7 @@
         "party": "Republican",
         "url": "http://www.burr.senate.gov",
         "rss_url": "http://www.burr.senate.gov/public/index.cfm?fuseaction=rss.feed",
+        "contact_form": "https://www.burr.senate.gov/contact/email",
         "address": "217 Russell Senate Office Building Washington DC 20510",
         "office": "217 Russell Senate Office Building",
         "phone": "202-224-3154"
@@ -6885,6 +6889,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.capito.senate.gov",
+        "contact_form": "https://www.capito.senate.gov/contact/contact-shelley",
         "address": "172 Russell Senate Office Building Washington DC 20510",
         "office": "172 Russell Senate Office Building",
         "phone": "202-224-6472"
@@ -7353,6 +7358,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "http://www.cassidy.senate.gov",
+        "contact_form": "https://www.cassidy.senate.gov/contact",
         "address": "703 Hart Senate Office Building Washington DC 20510",
         "office": "703 Hart Senate Office Building",
         "phone": "202-224-5824"
@@ -9737,6 +9743,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "http://www.crapo.senate.gov",
+        "contact_form": "http://www.crapo.senate.gov/contact/email.cfm",
         "address": "239 Dirksen Senate Office Building Washington DC 20510",
         "office": "239 Dirksen Senate Office Building",
         "phone": "202-224-6142"
@@ -14073,6 +14080,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.gardner.senate.gov",
+        "contact_form": "https://www.gardner.senate.gov/contact-cory/email-cory",
         "address": "354 Russell Senate Office Building Washington DC 20510",
         "office": "354 Russell Senate Office Building",
         "phone": "202-224-5941"
@@ -14896,6 +14904,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "http://www.grassley.senate.gov",
+        "contact_form": "https://www.grassley.senate.gov/constituents/questions-and-comments",
         "rss_url": "http://grassley.senate.gov/customcf/rss_feed.cfm",
         "address": "135 Hart Senate Office Building Washington DC 20510",
         "office": "135 Hart Senate Office Building",
@@ -16957,6 +16966,7 @@
         "party": "Republican",
         "url": "https://www.hoeven.senate.gov",
         "rss_url": "http://www.hoeven.senate.gov/public/index.cfm/rss/feed",
+        "contact_form": "https://www.hoeven.senate.gov/contact/email-the-senator",
         "address": "338 Russell Senate Office Building Washington DC 20510",
         "office": "338 Russell Senate Office Building",
         "phone": "202-224-2551"
@@ -17578,6 +17588,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "http://www.isakson.senate.gov",
+        "contact_form": "https://www.isakson.senate.gov/public/index.cfm/email-me",
         "rss_url": "http://www.isakson.senate.gov/public/?a=RSS.Feed",
         "address": "131 Russell Senate Office Building Washington DC 20510",
         "office": "131 Russell Senate Office Building",
@@ -18388,6 +18399,7 @@
         "party": "Republican",
         "url": "http://www.ronjohnson.senate.gov",
         "rss_url": "http://www.ronjohnson.senate.gov/public/index.cfm/rss/feed",
+        "contact_form": "https://www.ronjohnson.senate.gov/public/index.cfm/email-the-senator",
         "address": "328 Hart Senate Office Building Washington DC 20510",
         "office": "328 Hart Senate Office Building",
         "phone": "202-224-5323"
@@ -20252,6 +20264,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.lankford.senate.gov",
+        "contact_form": "https://www.lankford.senate.gov/contact/email",
         "address": "316 Hart Senate Office Building Washington DC 20510",
         "office": "316 Hart Senate Office Building",
         "phone": "202-224-5754"
@@ -20750,6 +20763,7 @@
         "party": "Democrat",
         "url": "https://www.leahy.senate.gov",
         "rss_url": "http://www.leahy.senate.gov/rss/feeds/press/",
+        "contact_form": "https://www.leahy.senate.gov/contact",
         "address": "437 Russell Senate Office Building Washington DC 20510",
         "office": "437 Russell Senate Office Building",
         "phone": "202-224-4242"
@@ -20958,6 +20972,7 @@
         "party": "Republican",
         "url": "http://www.lee.senate.gov/public",
         "rss_url": "http://www.lee.senate.gov/public/index.cfm/rss/feed",
+        "contact_form": "https://www.lee.senate.gov/public/index.cfm/contact",
         "address": "361A Russell Senate Office Building Washington DC 20510",
         "office": "361a Russell Senate Office Building",
         "phone": "202-224-5444"
@@ -23504,6 +23519,7 @@
         "class": 3,
         "state_rank": "senior",
         "party": "Republican",
+        "contact_form": "https://www.mccain.senate.gov/public/index.cfm/contact-form",
         "url": "http://www.mccain.senate.gov",
         "address": "218 Russell Senate Office Building Washington DC 20510",
         "office": "218 Russell Senate Office Building",
@@ -25028,6 +25044,7 @@
         "party": "Republican",
         "url": "http://www.moran.senate.gov",
         "rss_url": "http://www.moran.senate.gov/public/index.cfm/rss/feed/",
+        "contact_form": "https://www.moran.senate.gov/public/index.cfm/e-mail-jerry",
         "address": "521 Dirksen Senate Office Building Washington DC 20510",
         "office": "521 Dirksen Senate Office Building",
         "phone": "202-224-6521"
@@ -25196,6 +25213,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "https://www.murkowski.senate.gov",
+        "contact_form": "https://www.murkowski.senate.gov/contact/email",
         "rss_url": "http://www.murkowski.senate.gov/public/?a=rss.feed",
         "address": "522 Hart Senate Office Building Washington DC 20510",
         "office": "522 Hart Senate Office Building",
@@ -25498,6 +25516,7 @@
         "party": "Democrat",
         "url": "http://www.murray.senate.gov/public",
         "rss_url": "http://www.murray.senate.gov/public/?a=rss.feed",
+        "contact-form": "https://www.murray.senate.gov/public/index.cfm/lowbandwidth/contactme",
         "address": "154 Russell Senate Office Building Washington DC 20510",
         "office": "154 Russell Senate Office Building",
         "phone": "202-224-2621"
@@ -26963,6 +26982,7 @@
         "party": "Republican",
         "url": "https://www.paul.senate.gov",
         "rss_url": "http://paul.senate.gov/rss/?p=news",
+        "contact_form": "https://www.paul.senate.gov/connect/email-rand",
         "address": "167 Russell Senate Office Building Washington DC 20510",
         "office": "167 Russell Senate Office Building",
         "phone": "202-224-4343"
@@ -27585,6 +27605,7 @@
         "state_rank": "junior",
         "party": "Democrat",
         "url": "https://www.peters.senate.gov",
+        "contact_form": "https://www.peters.senate.gov/contact/email-gary",
         "address": "724 Hart Senate Office Building Washington DC 20510",
         "office": "724 Hart Senate Office Building",
         "phone": "202-224-6221"
@@ -28192,6 +28213,7 @@
         "party": "Republican",
         "url": "http://www.portman.senate.gov",
         "rss_url": "http://www.portman.senate.gov/public/index.cfm/rss/feed",
+        "contact-form": "https://www.portman.senate.gov/public/index.cfm/contact-form",
         "address": "448 Russell Senate Office Building Washington DC 20510",
         "office": "448 Russell Senate Office Building",
         "phone": "202-224-3353"
@@ -30727,6 +30749,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "http://www.rubio.senate.gov",
+        "contact_form": "http://www.rubio.senate.gov/public/index.cfm/contact",
         "rss_url": "http://www.rubio.senate.gov/public/?a=rss.feed",
         "address": "284 Russell Senate Office Building Washington DC 20510",
         "office": "284 Russell Senate Office Building",
@@ -32162,6 +32185,7 @@
         "state_rank": "senior",
         "party": "Democrat",
         "url": "https://www.schumer.senate.gov",
+        "contact_form": "https://www.schumer.senate.gov/contact/email-chuck",
         "address": "322 Hart Senate Office Building Washington DC 20510",
         "office": "322 Hart Senate Office Building",
         "phone": "202-224-6542"
@@ -32720,6 +32744,7 @@
         "party": "Republican",
         "url": "https://www.scott.senate.gov",
         "rss_url": "http://www.scott.senate.gov/rss.xml",
+        "contact_form": "https://www.scott.senate.gov/contact/email-me",
         "address": "520 Hart Senate Office Building Washington DC 20510",
         "office": "520 Hart Senate Office Building",
         "phone": "202-224-6121"
@@ -33503,6 +33528,7 @@
         "state_rank": "senior",
         "party": "Republican",
         "url": "http://www.shelby.senate.gov",
+        "contact_form": "https://www.shelby.senate.gov/public/index.cfm/emailsenatorshelby",
         "rss_url": "http://www.shelby.senate.gov/public/index.cfm/rss/feed",
         "address": "304 Russell Senate Office Building Washington DC 20510",
         "office": "304 Russell Senate Office Building",
@@ -36021,6 +36047,7 @@
         "party": "Republican",
         "url": "http://www.thune.senate.gov",
         "rss_url": "http://www.thune.senate.gov/public/index.cfm/rss/feed",
+        "contact_form": "https://www.thune.senate.gov/public/index.cfm/contact",
         "address": "511 Dirksen Senate Office Building Washington DC 20510",
         "office": "511 Dirksen Senate Office Building",
         "phone": "202-224-2321"
@@ -36430,6 +36457,7 @@
         "party": "Republican",
         "url": "http://www.toomey.senate.gov",
         "rss_url": "http://toomey.senate.gov/rss/?p=hot_topic",
+        "contact_form": "https://www.toomey.senate.gov/?p=contact",
         "address": "248 Russell Senate Office Building Washington DC 20510",
         "office": "248 Russell Senate Office Building",
         "phone": "202-224-4254"
@@ -36988,7 +37016,8 @@
         "address": "B40C Dirksen Senate Office Building Washington DC 20510",
         "office": "B40c Dirksen Senate Office Building",
         "phone": "202-224-4654",
-        "url": "https://www.vanhollen.senate.gov"
+        "url": "https://www.vanhollen.senate.gov",
+        "contact_form": "https://www.vanhollen.senate.gov/content/contact-senator"
       }
     ]
   },
@@ -38831,6 +38860,7 @@
         "party": "Democrat",
         "url": "https://www.wyden.senate.gov",
         "rss_url": "http://www.wyden.senate.gov/rss/feeds/?type=all&amp;",
+        "contact_form": "https://www.wyden.senate.gov/contact",
         "address": "221 Dirksen Senate Office Building Washington DC 20510",
         "office": "221 Dirksen Senate Office Building",
         "phone": "202-224-5244"
@@ -39360,7 +39390,8 @@
         "address": "B33 Russell Senate Office Building Washington DC 20510",
         "office": "B33 Russell Senate Office Building",
         "phone": "202-224-5623",
-        "url": "https://www.young.senate.gov"
+        "url": "https://www.young.senate.gov",
+        "contact_form": "https://www.young.senate.gov/content/contact-senator"
       }
     ]
   },
@@ -39964,6 +39995,7 @@
         "state_rank": "senior",
         "party": "Democrat",
         "url": "http://www.schatz.senate.gov",
+        "contact_form": "https://www.schatz.senate.gov/contact",
         "address": "722 Hart Senate Office Building Washington DC 20510",
         "office": "722 Hart Senate Office Building",
         "phone": "202-224-3934"
@@ -40197,6 +40229,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.cotton.senate.gov",
+        "contact_form": "https://www.cotton.senate.gov/?p=contact",
         "address": "124 Russell Senate Office Building Washington DC 20510",
         "office": "124 Russell Senate Office Building",
         "phone": "202-224-2353"
@@ -41734,7 +41767,8 @@
         "address": "G12 Dirksen Senate Office Building Washington DC 20510",
         "office": "G12 Dirksen Senate Office Building",
         "phone": "202-224-2854",
-        "url": "https://www.duckworth.senate.gov"
+        "url": "https://www.duckworth.senate.gov",
+        "contact_form":"https://www.duckworth.senate.gov/content/contact-senator"
       }
     ]
   },
@@ -42295,6 +42329,7 @@
         "phone": "202-225-5931",
         "url": "https://kennedy.house.gov",
         "rss_url": "http://kennedy.house.gov/rss.xml",
+        "contact_form": "https://www.kennedy.senate.gov/content/contact-senator",
         "address": "434 Cannon HOB; Washington DC 20515-2104",
         "office": "434 Cannon House Office Building"
       }
@@ -42745,6 +42780,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.daines.senate.gov",
+        "contact_form": "https://www.daines.senate.gov/connect/email-steve",
         "address": "320 Hart Senate Office Building Washington DC 20510",
         "office": "320 Hart Senate Office Building",
         "phone": "202-224-2651",
@@ -44348,7 +44384,7 @@
         "office": "404 Russell Senate Office Building",
         "phone": "202-224-5922",
         "state_rank": "junior",
-        "contact_form": "http://www.cruz.senate.gov/?p=email_senator",
+        "contact_form": "https://www.cruz.senate.gov/?p=form&id=16",
         "fax": "202-228-3398"
       }
     ]
@@ -48566,6 +48602,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "http://www.sullivan.senate.gov",
+        "contact_form": "https://www.sullivan.senate.gov/contact/email",
         "address": "702 Hart Senate Office Building Washington DC 20510",
         "office": "702 Hart Senate Office Building",
         "phone": "202-224-3004"
@@ -48607,6 +48644,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "http://www.perdue.senate.gov",
+        "contact_form": "https://www.perdue.senate.gov/connect/email",
         "address": "383 Russell Senate Office Building Washington DC 20510",
         "office": "383 Russell Senate Office Building",
         "phone": "202-224-3521"
@@ -48690,6 +48728,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "https://www.tillis.senate.gov/public/index.cfm/home",
+        "contact_form": "https://www.ernst.senate.gov/public/index.cfm/email-joni",
         "address": "185 Dirksen Senate Office Building Washington DC 20510",
         "office": "185 Dirksen Senate Office Building",
         "phone": "202-224-6342"
@@ -48731,6 +48770,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "http://www.rounds.senate.gov",
+        "contact_form": "https://www.rounds.senate.gov/contact/email-mike",
         "address": "502 Hart Senate Office Building Washington DC 20510",
         "office": "502 Hart Senate Office Building",
         "phone": "202-224-5842"
@@ -48825,6 +48865,7 @@
         "state_rank": "junior",
         "party": "Republican",
         "url": "http://www.sasse.senate.gov/public",
+        "contact_form": "https://www.sasse.senate.gov/public/index.cfm/email-ben",
         "address": "386A Russell Senate Office Building Washington DC 20510",
         "office": "386a Russell Senate Office Building",
         "phone": "202-224-4224"
@@ -49279,6 +49320,7 @@
         "address": "112 Hart Senate Office Building Washington DC 20510",
         "office": "112 Hart Senate Office Building",
         "phone": "202-224-3553",
+        "contact_form": "https://www.harris.senate.gov/content/contact-senator",
         "url": "https://www.harris.senate.gov"
       }
     ]
@@ -49363,7 +49405,8 @@
         "address": "B85 Russell Senate Office Building Washington DC 20510",
         "office": "B85 Russell Senate Office Building",
         "phone": "202-224-3324",
-        "url": "https://www.hassan.senate.gov"
+        "url": "https://www.hassan.senate.gov",
+        "contact_form": "https://www.hassan.senate.gov/content/contact-senator"
       }
     ]
   },
@@ -49404,7 +49447,8 @@
         "address": "B40A Dirksen Senate Office Building Washington DC 20510",
         "office": "B40a Dirksen Senate Office Building",
         "phone": "202-224-3542",
-        "url": "https://www.cortezmasto.senate.gov"
+        "url": "https://www.cortezmasto.senate.gov",
+        "contact_form": "https://www.cortezmasto.senate.gov/content/contact-senator"
       }
     ]
   },

@@ -17,8 +17,9 @@ class AddressComponent extends Component {
       name2: '',
       topics1:'',
       topics2:'',
-      url1:'',
-      url2:''
+      bioguide:'',
+      contact1:'',
+      contact2:''
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -30,8 +31,9 @@ class AddressComponent extends Component {
       this.setState({home: event.target.value});
       var o = [];
       var bio_ids = [];
-      var production = window.location.hostname === 'localhost' ? false : true;
-      var apiAddress = production ? 'https://politicationapi.herokuapp.com/api' : 'http://localhost:5000/api';
+      // var production = window.location.hostname === 'localhost' ? false : true;
+      // production = false;
+      var apiAddress ='http://localhost:5000/api';
 
 
       for (var i=0; i<leg.length; i++){
@@ -39,7 +41,10 @@ class AddressComponent extends Component {
           var names = leg[i].name.official_full;
           var bioguide = leg[i].id.bioguide;
           if (leg[i].terms.slice(-1)[0].type === "sen" && leg[i].terms.slice(-1)[0].state === event.target.value){
-            var url=leg[i].terms.slice(-1)[0].url;
+            var url=leg[i].terms.slice(-1)[0].contact_form;
+            // console.log(url)
+            var rss=leg[i].terms.slice(-1)[0].rss_url;
+            // console.log(url, rss)
             o.push(names, party, url);
             console.log(o)
 
@@ -48,10 +53,13 @@ class AddressComponent extends Component {
             this.setState({
               name1: "Senator " + o[0] + ", " + o[1],
               name2: "Senator " + o[3] + ", " + o[4],
-              url1: o[2],
-              url2: o[5]
+              contact1: o[2],
+              contact2: o[5],
+              bioguide: bio_ids
+
+
             });
-            axios.post(apiAddress, {
+            axios.post('http://localhost:5000/api', {
               bio_ids: bio_ids
             })
             .then(function (resp) {
@@ -59,6 +67,7 @@ class AddressComponent extends Component {
               for (var prop in parse) {
                 // console.log('obj.' + prop, '=', parse[prop].required_actions);
                 var topic = parse[prop].required_actions;
+                // console.log(parse[prop]);
                 // console.log(topic)
                 for(var x=0; x< topic.length; x++){
                   if (topic[x].value == "$TOPIC"){
@@ -68,7 +77,7 @@ class AddressComponent extends Component {
                     for (var option in opt){
                       // console.log('obj.' + option, '=', opt[option]);
                       var options = option;
-                      console.log(options);
+                      // console.log(options);
 
                      }
                    }
@@ -93,6 +102,7 @@ class AddressComponent extends Component {
             if (topic[x].value == "$TOPIC"){
               // console.log(topic[x].options_hash);
               var opt = topic[x].options_hash;
+              console.log(opt)
               // console.log(opt)
               // console.log(opt);
               for (var option in opt){
@@ -114,7 +124,7 @@ class AddressComponent extends Component {
 
 
     handleSubmit(e) {
-      browserHistory.push('/form-fill' + this.state.topics1)
+      browserHistory.push('/form-fill' + this.state.bio_ids)
       // e.preventDefault();
 
 
@@ -188,8 +198,6 @@ class AddressComponent extends Component {
                   	<option value="WI">Wisconsin</option>
                   	<option value="WY">Wyoming</option>
                   </select>
-                  <br />
-                  <a href="/form-fill" type="submit" className="btn btn-default">Submit</a>
 
 
           </fieldset>
@@ -200,8 +208,13 @@ class AddressComponent extends Component {
         nameTwo={this.state.name2}
         urlOne={this.state.url1}
         urlTwo={this.state.url2}
+        rssOne={this.state.rss1}
+        rssTwo={this.state.rss2}
+        contactOne={this.state.contact1}
+        contactTwo={this.state.contact2}
+
       />
-      <Footer />
+      <Footer newFrame1={this.state.contact1} />
     </div>
     )
   }

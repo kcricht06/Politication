@@ -21,9 +21,7 @@ h1 {
 h4{
    margin: 0 0 20px 0;
 }
-#select{
-  margin-bottom:5px;
-}
+
 #contact-form {
    background-color:rgba(72,72,72,0.7);
    padding: 10px 200px 30px 200px;
@@ -32,7 +30,7 @@ h4{
    left: 50%;
    position: absolute;
    margin-top:30px;
-   margin-left: -410px;
+   margin-left: -408px;
    border-radius:7px;
    -webkit-border-radius:7px;
    -moz-border-radius:7px;
@@ -71,7 +69,7 @@ h4{
 #contact-form textarea {
    width:400%;
    height: 150px;
-   margin-left: -165px;
+   margin-left: -170px;
 }
 #contact-form button[type="submit"] {
    cursor:pointer;
