@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../index.css';
-import Footer from './footer';
 // import leg from '../../public/api/Legislators.json';
 // import AddressComponent from './address-components.js';
 // import axios from 'axios';
@@ -8,15 +7,15 @@ import Footer from './footer';
 class LegName extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      contact:''
-    }
+    // this.state = {
+    //   contact:
+    // }
   }
-
-  handleClick(e){
-    e.preventDefault();
-
-  }
+  // 
+  // handleClick(e){
+  //   e.preventDefault();
+  //   if( this.props.conta)
+  // }
 
   render(){
 
@@ -26,10 +25,10 @@ class LegName extends Component {
       <div id="legs">
 
         <ul>
-          <a onClick={this.handleClick} href={this.props.contactOne}><li className="legName">{this.props.nameOne}</li></a>
-          <a onClick={this.handleClick} href={this.props.contactTwo}><li className="legName">{this.props.nameTwo}</li></a>
+          <a onClick={this.handleClick} href={this.props.urlOne}><li className="legName">{this.props.nameOne}</li></a>
+          <a onClick={this.handleClick} href={this.props.urlTwo}><li className="legName">{this.props.nameTwo}</li></a>
 
-          <Footer onClick={this.handleClick} />
+
         </ul>
       </div>
     )

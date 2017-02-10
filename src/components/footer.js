@@ -12,8 +12,9 @@ class Footer extends Component{
     return(
       <div id="foot">
         <div className="row">
-        <Iframe id="iframe" className="col-md-3" url={this.props.newFrame1} height="700px" width="700px" />
-        
+          <iframe id="iframe1" src={this.props.newFrame1}></iframe>
+          <iframe id="iframe2" src={this.props.newFrame2}></iframe>
+
       </div>
       </div>
     )

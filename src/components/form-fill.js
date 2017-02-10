@@ -69,7 +69,7 @@ class FormFill extends Component{
           console.log(body);
       }
     }
-    alert('Your message has been sent!')
+    // alert('Your message has been sent!')
     request(options, callback);;
   }
 
@@ -80,7 +80,7 @@ class FormFill extends Component{
   render(){
     return(
       <div>
-
+        <Header />
         <div id="contact-form">
         	<div>
         		<h1>Message Your Senators!</h1>
@@ -142,8 +142,8 @@ class FormFill extends Component{
         		      <label htmlFor="$TOPIC">
         		      <span>Topic: </span>
         			      <select onChange={this.handleSubmit} id="$TOPIC" name="$TOPIC" value={this.state.$TOPIC} tabIndex="4">
-                       <option value="">-Select a Topic-</option> */}
-        			         {/* <option value="Agriculture">Agriculture</option>
+                       <option value="">-Select a Topic-</option>
+        			         <option value="Agriculture">Agriculture</option>
                        <option value="Animal Welfare">Animal Welfare</option>
                        <option value="Arts & Humanities">Arts & Humanities</option>
                        <option value="Auto Industry">Auto Industry</option>
@@ -180,9 +180,9 @@ class FormFill extends Component{
                        <option value="Telecommunications">Telecommunications</option>
                        <option value="Transportation">Transportation</option>
                        <option value="Veterans Policy">Veterans Policy</option>
-                       <option value="Welfare & Poverty">Welfare & Poverty</option> */}
+                       <option value="Welfare & Poverty">Welfare & Poverty</option>
 
-        			      {/* </select>
+        			      </select>
         		      </label>
             	 </div> */}
             	 <div id="messageForm">

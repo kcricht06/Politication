@@ -5,6 +5,7 @@ body {
   text-align: center;
   background-image: url('./../public/img/sol.jpg');
 }
+
 ul {
   list-style-type: none;
 }
@@ -16,8 +17,11 @@ ul {
   text-decoration: none;
 
 }
-#iframe{
-  float:middle;
+#iframe1, #iframe2{
+  margin: 10px;
+  width: 700px;
+  height: 500px;
+  border: none;
 }
 #header{
   text-decoration: none;
@@ -25,15 +29,12 @@ ul {
   font-family:'Julius Sans One', sans-serif;
   font-weight: bolder;
   letter-spacing: 8px;
-
+  width: 100%;
 }
+
 legend {
   border-bottom: 0;
   margin-bottom: 65px;
-}
-Iframe{
-  margin-left: -360px;
-  padding-bottom: 100px;
 }
 
 select {
@@ -43,6 +44,7 @@ select {
   margin-bottom: 5px;
   color: black;
 }
+
 #forms {
   width: 66%;
   align-items: center;
@@ -50,7 +52,6 @@ select {
   padding-left: 150px;
   text-align:center;
 }
-#message {}
 
 .legName{
   color: #333;
@@ -59,6 +60,7 @@ select {
   font-weight: 700;
 
 }
+
 #legs{
   text-align: center;
 }

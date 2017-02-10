@@ -20,6 +20,7 @@ class AddressComponent extends Component {
       bioguide:'',
       contact1:'',
       contact2:''
+
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -37,13 +38,12 @@ class AddressComponent extends Component {
 
 
       for (var i=0; i<leg.length; i++){
-          var party = leg[i].terms.slice(-1)[0].party;
-          var names = leg[i].name.official_full;
-          var bioguide = leg[i].id.bioguide;
+          var party = leg[i].terms.slice(-1)[0].party,
+              names = leg[i].name.official_full,
+              bioguide = leg[i].id.bioguide;
           if (leg[i].terms.slice(-1)[0].type === "sen" && leg[i].terms.slice(-1)[0].state === event.target.value){
-            var url=leg[i].terms.slice(-1)[0].contact_form;
-            // console.log(url)
-            var rss=leg[i].terms.slice(-1)[0].rss_url;
+            var url=leg[i].terms.slice(-1)[0].contact_form,
+                rss=leg[i].terms.slice(-1)[0].rss_url;
             // console.log(url, rss)
             o.push(names, party, url);
             console.log(o)
@@ -214,7 +214,7 @@ class AddressComponent extends Component {
         contactTwo={this.state.contact2}
 
       />
-      <Footer newFrame1={this.state.contact1} />
+      <Footer newFrame1={this.state.contact1} newFrame2={this.state.contact2} />
     </div>
     )
   }
