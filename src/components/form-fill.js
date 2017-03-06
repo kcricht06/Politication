@@ -48,29 +48,29 @@ class FormFill extends Component{
       bioguide: this.props.bioGuide
 
 
-    });
-    var request = require('request');
+      });
+      var request = require('request');
 
-    var headers = {
-      'Content-Type': 'application/json'
-    };
+      var headers = {
+        'Content-Type': 'application/json'
+      };
 
-    var dataString = this.state;
-    console.log(dataString)
-    var options = {
-      url: 'http://localhost:5000/apiSend',
-      method: 'POST',
-      headers: headers,
-      body: dataString
-    };
+      var dataString = this.state;
+      console.log(dataString)
+      var options = {
+        url: 'http://localhost:5000/apiSend',
+        method: 'POST',
+        headers: headers,
+        body: dataString
+      };
 
-    function callback(error, response, body) {
-      if (!error && response.statusCode == 200) {
-          console.log(body);
+      function callback(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+        }
       }
-    }
-    // alert('Your message has been sent!')
-    request(options, callback);;
+      // alert('Your message has been sent!')
+      request(options, callback);;
   }
 
   // handleSubmit(e){
@@ -191,13 +191,14 @@ class FormFill extends Component{
         		      	<textarea  onChange={this.handleSubmit} id="message" value={this.state.$MESSAGE} name="message" placeholder="Please write your message here." tabIndex="5" required="required"></textarea>
         		      </label>
             	 </div>
+
             	 <div>
         		      <button onChange={this.handleSubmit} name="submit" type="submit" id="submitForm" >SEND</button>
             	 </div>
-            		   </form>
 
+            		   </form>
             	</div>
-      </div>
+            </div>
     )
   }
 }

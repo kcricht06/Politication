@@ -36,7 +36,7 @@ class AddressComponent extends Component {
       // production = false;
       var apiAddress ='http://localhost:5000/api';
 
-
+      // Finding names, party affiliation and contact forms of senators.
       for (var i=0; i<leg.length; i++){
           var party = leg[i].terms.slice(-1)[0].party,
               names = leg[i].name.official_full,
@@ -57,7 +57,7 @@ class AddressComponent extends Component {
               contact2: o[5],
               bioguide: bio_ids
 
-
+              // noooooooooo.... sad API is sad :'(
             });
             axios.post('http://localhost:5000/api', {
               bio_ids: bio_ids
@@ -65,19 +65,12 @@ class AddressComponent extends Component {
             .then(function (resp) {
               var parse = JSON.parse(resp.data);
               for (var prop in parse) {
-                // console.log('obj.' + prop, '=', parse[prop].required_actions);
                 var topic = parse[prop].required_actions;
-                // console.log(parse[prop]);
-                // console.log(topic)
                 for(var x=0; x< topic.length; x++){
                   if (topic[x].value == "$TOPIC"){
-                    // console.log(topic[x].options_hash);
                     var opt = topic[x].options_hash;
-                    // console.log(opt);
                     for (var option in opt){
-                      // console.log('obj.' + option, '=', opt[option]);
                       var options = option;
-                      // console.log(options);
 
                      }
                    }
@@ -90,7 +83,7 @@ class AddressComponent extends Component {
           }
         }
     }
-
+    // Used to populate the topic drop down menu found in form-fill.js.
     handleOptionChange(resp, e){
       e.preventDefault();
         var parse = JSON.parse(resp.data);
@@ -118,9 +111,6 @@ class AddressComponent extends Component {
           }
         }
       }
-
-
-
 
 
     handleSubmit(e) {
@@ -214,7 +204,9 @@ class AddressComponent extends Component {
         contactTwo={this.state.contact2}
 
       />
-      <Footer newFrame1={this.state.contact1} newFrame2={this.state.contact2} />
+      <Footer
+        newFrame1={this.state.contact1}
+        newFrame2={this.state.contact2} />
     </div>
     )
   }
